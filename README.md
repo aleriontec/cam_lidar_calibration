@@ -10,6 +10,9 @@ We also provide a [video tutorial](https://youtu.be/WmzEnjmffQU) for this packag
 <em><b>Left:</b> Our sensor setup at the Australian Centre for Field Robotics (ACFR). <b>Right:</b> Calibration results of this package with an Nvidia gmsl camera to both Baraja Spectrum-Scan™ (top) and Velodyne VLP-16 (bottom). The projection of Baraja Spectrum-Scan™ has some ground points (yellow) on the chessboard due to the difference in perspective of camera and lidar.</em>
 </p>
 
+Note: In the paper, equation (2) of the condition number has a typo. The correct equation for calculating the condition number is as follows (which is also correctly implemented in this repo):
+![conditionnum_formula](https://user-images.githubusercontent.com/39115809/134602161-11fc2091-34e6-49af-9edc-79bebe631a27.gif)
+
 # 1. Getting started
 ## 1.1 Installation 
 
