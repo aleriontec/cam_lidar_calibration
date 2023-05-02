@@ -878,6 +878,12 @@ namespace cam_lidar_calibration
             sample.camera_normal = cv::Point3d(chessboard_normal);
             sample.pixeltometre = metreperpixel_cbdiag;
 
+            printf("Corner vectors:\n");
+            printf("Point 1: (%0.3f, %0.3f, %0.3f)\n", sample.camera_corners[0].x, sample.camera_corners[0].y, sample.camera_corners[0].z);
+            printf("Point 2: (%0.3f, %0.3f, %0.3f)\n", sample.camera_corners[1].x, sample.camera_corners[1].y, sample.camera_corners[1].z);
+            printf("Point 3: (%0.3f, %0.3f, %0.3f)\n", sample.camera_corners[2].x, sample.camera_corners[2].y, sample.camera_corners[2].z);
+            printf("Point 4: (%0.3f, %0.3f, %0.3f)\n", sample.camera_corners[3].x, sample.camera_corners[3].y, sample.camera_corners[3].z);
+
             // FIND THE MAX AND MIN POINTS IN EVERY RING CORRESPONDING TO THE BOARD
             auto [cloud_projected, lidar_normal] = extractBoard(cloud_bounded, sample);
             if (cloud_projected->points.size() == 0)
@@ -887,6 +893,7 @@ namespace cam_lidar_calibration
             sample.lidar_normal = lidar_normal;
 
             // First: Sort out the points in the point cloud according to their ring numbers
+            printf("Ring count = %d",i_params.lidar_ring_count);
             std::vector<PointCloud> ring_pointclouds(i_params.lidar_ring_count);
 
             for (const auto& point : cloud_projected->points)

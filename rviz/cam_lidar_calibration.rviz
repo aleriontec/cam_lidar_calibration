@@ -87,11 +87,11 @@ Visualization Manager:
         Max Value: 10
         Min Value: -10
         Value: true
-      Axis: Z
+      Axis: X
       Channel Name: intensity
       Class: rviz/PointCloud2
       Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color Transformer: AxisColor
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -104,7 +104,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.009999999776482582
+      Size (m): 0.025
       Style: Flat Squares
       Topic: /feature_extraction/experimental_region
       Unreliable: false
